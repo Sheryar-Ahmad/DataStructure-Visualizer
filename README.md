@@ -1,85 +1,122 @@
-# Data Structure Visualizer
+# 🗂️ Data Structure Visualizer
 
-## A Java Swing Desktop Application for Visual Learning
+> An interactive Java Swing desktop application that turns abstract data structure concepts into clear, step-by-step visual demonstrations.
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-![Swing](https://img.shields.io/badge/Swing-5382a1?style=for-the-badge&logo=java&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
+[![Java](https://img.shields.io/badge/Java-8%2B-orange?logo=openjdk&logoColor=white)](https://docs.oracle.com/en/java/)
+[![Swing](https://img.shields.io/badge/GUI-Java%20Swing-blue?logo=java&logoColor=white)](https://docs.oracle.com/javase/tutorial/uiswing/)
+[![Platform](https://img.shields.io/badge/Platform-Desktop-lightgrey)]()
+[![Status](https://img.shields.io/badge/Status-In%20Development-yellow)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![Stars](https://img.shields.io/github/stars/<your-username>/data-structure-visualizer?style=social)](https://github.com/<your-username>/data-structure-visualizer/stargazers)
+[![Forks](https://img.shields.io/github/forks/<your-username>/data-structure-visualizer?style=social)](https://github.com/<your-username>/data-structure-visualizer/network/members)
+[![Issues](https://img.shields.io/github/issues/<your-username>/data-structure-visualizer)](https://github.com/<your-username>/data-structure-visualizer/issues)
 
-## 📖 Overview
+---
 
-**Data Structure Visualizer** is an educational desktop application built with Java Swing that helps students and beginners understand complex data structures through interactive graphical representations. Instead of just reading code or looking at static diagrams, users can perform operations and see the internal changes happen in real-time.
+### 📌 Table of Contents
 
-## 🎯 Purpose
+- [About The Project](#-about-the-project)
+- [Features](#-features)
+- [Topics Covered](#-topics-covered)
+- [Built With](#️-built-with)
+- [Getting Started](#-getting-started)
+- [Project Structure](#-project-structure)
+- [How It Works](#-how-it-works)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Author](#-author)
+- [Acknowledgements](#-acknowledgements)
 
-Many students struggle to understand how data structures work internally - how pointers move, how nodes connect, how elements are inserted or removed. This project bridges the gap between theoretical concepts and practical understanding by providing a visual, hands-on learning experience.
+---
+
+## 📖 About The Project
+
+Most students understand data structures in theory — but struggle to picture what's actually happening in memory when a node is inserted, a pointer moves, or a tree rebalances. Textbook diagrams are static, and reading code alone doesn't show *how* the structure changes over time.
+
+**Data Structure Visualizer** solves this by giving every operation a live, graphical representation. Select a topic, perform an operation like `Push`, `Enqueue`, or `Insert`, and watch the structure update in real time — complete with labeled pointers (`TOP`, `FRONT`, `REAR`, `HEAD`, `ROOT`) and a running operation log that explains exactly what just happened.
+
+This is a semester project built for the **Data Structures** course, designed to be both a learning tool and a classroom demonstration aid.
+
+---
 
 ## ✨ Features
 
-### 📊 Comprehensive Topic Coverage
+- 🧭 **Central Main Menu** — navigate to any data structure topic from one launcher screen
+- 🎨 **Graphical Visualization** — boxes, arrows, and labels represent real memory layout, not just text output
+- 🖱️ **Interactive Operations** — Add, Delete, Search, Push, Pop, Enqueue, Dequeue, Traverse, and more
+- 🏷️ **Live Pointer Labels** — always know where `TOP`, `FRONT`, `REAR`, `HEAD`, and `ROOT` are pointing
+- 📝 **Operation Log** — a running, human-readable log of every action performed
+- 🧩 **Modular Design** — every topic lives in its own Java file and its own screen
+- 🚫 **Zero Database Dependency** — pure in-memory visualization, no MySQL/JDBC setup required
 
-- **Arrays** - 1D and 2D array visualization with index-based access
-- **Linked Lists** - Singly, Circular, and Two-Way Circular Linked Lists
-- **Stacks** - Array-based, Linked list-based, Stack applications, Recursion visualization
-- **Queues** - Simple, Circular, Priority, and Dynamic Priority Queues
-- **Trees** - Binary Search Tree (BST), AVL Tree, Tree Traversal methods
-- **Expression Conversion** - Infix to Postfix, Infix to Prefix
+---
 
-### 🎨 Interactive Visualization
+## 🧠 Topics Covered
 
-- **Graphical Display** - Boxes, arrows, circles, and labels show data structure state
-- **Real-time Updates** - Visualization changes instantly with each operation
-- **Pointer Labels** - Clear labels for TOP, FRONT, REAR, HEAD, TAIL, ROOT
-- **Operation Log** - Detailed log explaining what happened after each action
+| Category | Modules |
+|---|---|
+| **Arrays** | Array visualization with index-based access |
+| **Lists & Linked Lists** | Singly Linked List, Circular Linked List, Two-Way Circular Linked List |
+| **Stack** | Array-based Stack, Linked List-based Stack, Stack Applications, Recursion via Stack |
+| **Queue** | Simple Queue, Circular Queue, Priority Queue, Dynamic Priority Queue, Queue Applications |
+| **Trees** | Binary Search Tree, AVL Tree (with rotations & balance factor), Tree Traversal (Inorder/Preorder/Postorder/Level-order) |
+| **Conversions** | Infix ↔ Prefix ↔ Postfix using stack logic |
+
+---
+
+## 🛠️ Built With
+
+- **Language:** [Java](https://docs.oracle.com/en/java/) (compatible with Java 8+)
+- **GUI Toolkit:** [Java Swing](https://docs.oracle.com/javase/tutorial/uiswing/) (`JFrame`, `JPanel`, `JButton`, `JLabel`, `JTextField`, `JComboBox`, etc.)
+- **IDE:** [VS Code](https://code.visualstudio.com/docs/languages/java) · [IntelliJ IDEA](https://www.jetbrains.com/idea/) · [NetBeans](https://netbeans.apache.org/)
+- **Database:** None — fully in-memory, since data structures are runtime constructs
+
+---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Java 8 or newer installed on your system
-- Any Java IDE or command-line compiler
+Make sure you have the [Java Development Kit (JDK 8 or newer)](https://www.oracle.com/java/technologies/downloads/) installed:
 
-### Installation
-
-**1. Clone the repository:**
 ```bash
-git clone https://github.com/Sheryar-Ahmad/DataStructure-Visualizer.git
-Navigate to the project directory:
+java -version
+javac -version
+```
 
-bash
-cd DataStructure-Visualizer
-Compile the Java files:
+### Installation & Running
 
-bash
-javac *.java
-Run the application:
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/<your-username>/data-structure-visualizer.git
+   cd data-structure-visualizer
+   ```
 
-bash
-java Main
+2. **Compile the project**
+   ```bash
+   javac -d bin src/*.java
+   ```
 
+3. **Run the application**
+   ```bash
+   java -cp bin Main
+   ```
 
-**💻 Usage Guide**
-Launch the application
+   > Replace `Main` with the actual name of your launcher class if different.
 
-Select a data structure topic from the main menu
+4. Alternatively, open the project folder directly in **IntelliJ IDEA**, **NetBeans**, or **VS Code** (with the Java Extension Pack) and run it from the IDE.
 
-Enter a value in the input field
+---
 
-Click operation buttons (Push, Pop, Insert, Delete, etc.)
+## 📂 Project Structure
 
-Watch the visualization update in real-time
-
-Check the operation log for detailed feedback
-
-Use the Back button to return to the main menu
-
-**📁 Project Structure**
-text
-DataStructure-Visualizer/
+```
+data-structure-visualizer/
 ├── src/
-│   ├── Main.java                    # Application launcher
-│   ├── MainMenu.java                # Main navigation screen
-│   ├── ArrayVisualizer.java         # Array visualization
+│   ├── Main.java                          # Application launcher
+│   ├── MainMenu.java                      # Central navigation screen
+│   ├── ArrayVisualizer.java
 │   ├── SinglyLinkedListVisualizer.java
 │   ├── CircularLinkedListVisualizer.java
 │   ├── TwoWayCircularLinkedListVisualizer.java
@@ -91,74 +128,57 @@ DataStructure-Visualizer/
 │   ├── CircularQueueVisualizer.java
 │   ├── PriorityQueueVisualizer.java
 │   ├── DynamicPriorityQueueVisualizer.java
-│   ├── QueueApplicationsVisualizer.java
 │   ├── BinarySearchTreeVisualizer.java
 │   ├── AVLTreeVisualizer.java
 │   ├── TreeTraversalVisualizer.java
 │   └── ExpressionConversionVisualizer.java
 ├── README.md
 └── LICENSE
+```
 
-**🎓 Learning Outcomes**
-✅ How data is stored in memory
+---
 
-✅ How pointers and references work
+## 🎯 How It Works
 
-✅ How insertion and deletion operations affect structure
+1. The app launches into the **Main Menu**.
+2. The user selects a data structure topic.
+3. The corresponding visualization screen opens.
+4. The user enters a value and clicks an operation button (e.g., `Push`, `Insert`, `Enqueue`).
+5. The program:
+   - Validates the input
+   - Performs the operation on the underlying data structure
+   - Redraws the visual representation
+   - Updates pointer labels (`TOP`, `FRONT`, `HEAD`, etc.)
+   - Appends a message to the operation log
+6. The user clicks **Back** to return to the Main Menu and explore another topic.
 
-✅ Why different data structures suit different use cases
+---
 
-✅ How tree balancing works (AVL rotations)
+## 🤝 Contributing
 
-✅ How expression conversion uses stack operations
+Contributions make the open-source community a great place to learn and build. Any contributions are **greatly appreciated**. Check out GitHub's [First Contributions guide](https://github.com/firstcontributions/first-contributions) if you're new to pull requests.
 
-✅ How recursion uses the call stack
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-**🎯 Target Audience**
-Students learning data structures in computer science courses
+---
 
-Teachers demonstrating concepts in the classroom
+## 📄 License
 
-Beginners wanting to understand memory representation
+Distributed under the MIT License. See `LICENSE` for more information.
 
-Self-learners exploring data structure fundamentals
+---
 
-**🛠️ Technologies Used**
-Language: Java (JDK 8+)
+## 👤 Author
 
-**GUI Framework:** Java Swing
-
-**Development Tools:** Any Java IDE
-
-**Version Control:** Git
-
-**🚧 Limitations**
-Desktop-only application (not web-based)
-
-No permanent data storage (educational focus)
-
-Limited to Java Swing graphics
-
-Not suitable for large-scale data processing
-
-**🤝 **Contributing****
-Contributions are welcome! Please follow these steps:
-
-Fork the repository
-
-Create a feature branch (git checkout -b feature/AmazingFeature)
-
-Commit your changes (git commit -m 'Add some AmazingFeature')
-
-Push to the branch (git push origin feature/AmazingFeature)
-
-Open a Pull Request
-
-**📝 **License****
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-**📧 **Contact****
+**Sheryar**
 Owner: Sheryar Ahmad
 Project Link: https://github.com/Sheryar-Ahmad/DataStructure-Visualizer
+
+
+---
 
 
