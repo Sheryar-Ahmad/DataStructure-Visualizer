@@ -41,7 +41,7 @@ Many students struggle to understand how data structures work internally - how p
 
 ### Installation
 
-1. Clone the repository:
+**1. Clone the repository:**
 ```bash
 git clone https://github.com/Sheryar-Ahmad/DataStructure-Visualizer.git
 Navigate to the project directory:
@@ -56,7 +56,9 @@ Run the application:
 
 bash
 java Main
-💻 Usage Guide
+
+
+**💻 Usage Guide**
 Launch the application
 
 Select a data structure topic from the main menu
@@ -71,7 +73,7 @@ Check the operation log for detailed feedback
 
 Use the Back button to return to the main menu
 
-📁 Project Structure
+**📁 Project Structure**
 text
 DataStructure-Visualizer/
 ├── src/
@@ -96,7 +98,8 @@ DataStructure-Visualizer/
 │   └── ExpressionConversionVisualizer.java
 ├── README.md
 └── LICENSE
-🎓 Learning Outcomes
+
+**🎓 Learning Outcomes**
 ✅ How data is stored in memory
 
 ✅ How pointers and references work
@@ -111,7 +114,7 @@ DataStructure-Visualizer/
 
 ✅ How recursion uses the call stack
 
-🎯 Target Audience
+**🎯 Target Audience**
 Students learning data structures in computer science courses
 
 Teachers demonstrating concepts in the classroom
@@ -120,16 +123,16 @@ Beginners wanting to understand memory representation
 
 Self-learners exploring data structure fundamentals
 
-🛠️ Technologies Used
+**🛠️ Technologies Used**
 Language: Java (JDK 8+)
 
-GUI Framework: Java Swing
+**GUI Framework:** Java Swing
 
-Development Tools: Any Java IDE
+**Development Tools:** Any Java IDE
 
-Version Control: Git
+**Version Control:** Git
 
-🚧 Limitations
+**🚧 Limitations**
 Desktop-only application (not web-based)
 
 No permanent data storage (educational focus)
@@ -138,7 +141,7 @@ Limited to Java Swing graphics
 
 Not suitable for large-scale data processing
 
-🤝 Contributing
+**🤝 **Contributing****
 Contributions are welcome! Please follow these steps:
 
 Fork the repository
@@ -151,16 +154,11 @@ Push to the branch (git push origin feature/AmazingFeature)
 
 Open a Pull Request
 
-📝 License
+**📝 **License****
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-📧 Contact
+**📧 **Contact****
 Owner: Sheryar Ahmad
 Project Link: https://github.com/Sheryar-Ahmad/DataStructure-Visualizer
 
-🙏 Acknowledgments
-Course instructors for project guidance
 
-Java Swing documentation and tutorials
-
-Open-source community for inspiration
