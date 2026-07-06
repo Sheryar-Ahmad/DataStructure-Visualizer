@@ -5,7 +5,6 @@
 [![Java](https://img.shields.io/badge/Java-8%2B-orange?logo=openjdk&logoColor=white)](https://docs.oracle.com/en/java/)
 [![Swing](https://img.shields.io/badge/GUI-Java%20Swing-blue?logo=java&logoColor=white)](https://docs.oracle.com/javase/tutorial/uiswing/)
 [![Platform](https://img.shields.io/badge/Platform-Desktop-lightgrey)]()
-[![Status](https://img.shields.io/badge/Status-In%20Development-yellow)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![Stars](https://img.shields.io/github/stars/<your-username>/data-structure-visualizer?style=social)](https://github.com/<your-username>/data-structure-visualizer/stargazers)
