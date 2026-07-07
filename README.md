@@ -1,31 +1,40 @@
-# 🗂️ Data Structure Visualizer
+# 🗂️ Data Structure Visualizer — Java Swing DSA Learning Tool
 
-> An interactive Java Swing desktop application that turns abstract data structure concepts into clear, step-by-step visual demonstrations.
+> **Data Structure Visualizer** is an open-source Java Swing desktop application that visually demonstrates how Stacks, Queues, Linked Lists, Binary Search Trees, and AVL Trees work internally — built to help students **learn Data Structures and Algorithms (DSA)** through real-time, interactive graphics instead of static diagrams.
 
-[![Java](https://img.shields.io/badge/Java-8%2B-orange?logo=openjdk&logoColor=white)](https://docs.oracle.com/en/java/)
-[![Swing](https://img.shields.io/badge/GUI-Java%20Swing-blue?logo=java&logoColor=white)](https://docs.oracle.com/javase/tutorial/uiswing/)
-[![Platform](https://img.shields.io/badge/Platform-Desktop-lightgrey)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-[![Stars](https://img.shields.io/github/stars/<your-username>/data-structure-visualizer?style=social)](https://github.com/<your-username>/data-structure-visualizer/stargazers)
-[![Forks](https://img.shields.io/github/forks/<your-username>/data-structure-visualizer?style=social)](https://github.com/<your-username>/data-structure-visualizer/network/members)
-[![Issues](https://img.shields.io/github/issues/<your-username>/data-structure-visualizer)](https://github.com/<your-username>/data-structure-visualizer/issues)
+[![Java](https://img.shields.io/badge/Java-8%2B-orange?style=flat-square&logo=openjdk&logoColor=white)](https://docs.oracle.com/en/java/)
+[![Swing](https://img.shields.io/badge/GUI-Java%20Swing-blue?style=flat-square&logo=java&logoColor=white)](https://docs.oracle.com/javase/tutorial/uiswing/)
+[![Platform](https://img.shields.io/badge/Platform-Desktop-lightgrey?style=flat-square)]()
+[![License: MIT](https://img.shields.io/github/license/Sheryar-Ahmad/DataStructure-Visualizer?style=flat-square&color=green)](https://github.com/Sheryar-Ahmad/DataStructure-Visualizer/blob/main/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+[![Stars](https://img.shields.io/github/stars/Sheryar-Ahmad/DataStructure-Visualizer?style=flat-square&logo=github)](https://github.com/Sheryar-Ahmad/DataStructure-Visualizer/stargazers)
+[![Forks](https://img.shields.io/github/forks/Sheryar-Ahmad/DataStructure-Visualizer?style=flat-square&logo=github)](https://github.com/Sheryar-Ahmad/DataStructure-Visualizer/network/members)
+[![Issues](https://img.shields.io/github/issues/Sheryar-Ahmad/DataStructure-Visualizer?style=flat-square&logo=github)](https://github.com/Sheryar-Ahmad/DataStructure-Visualizer/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/Sheryar-Ahmad/DataStructure-Visualizer?style=flat-square&logo=github)](https://github.com/Sheryar-Ahmad/DataStructure-Visualizer/commits/main)
+[![Repo Size](https://img.shields.io/github/repo-size/Sheryar-Ahmad/DataStructure-Visualizer?style=flat-square)]()
+[![Top Language](https://img.shields.io/github/languages/top/Sheryar-Ahmad/DataStructure-Visualizer?style=flat-square)]()
+
+🔗 **Repository:** [github.com/Sheryar-Ahmad/DataStructure-Visualizer](https://github.com/Sheryar-Ahmad/DataStructure-Visualizer)
 
 ---
 
 ### 📌 Table of Contents
 
 - [About The Project](#-about-the-project)
+- [Why This Project? (Use Cases)](#-why-this-project)
 - [Features](#-features)
 - [Topics Covered](#-topics-covered)
 - [Built With](#️-built-with)
 - [Getting Started](#-getting-started)
 - [Project Structure](#-project-structure)
 - [How It Works](#-how-it-works)
+- [FAQ](#-frequently-asked-questions)
 - [Contributing](#-contributing)
 - [License](#-license)
 - [Author](#-author)
-- [Acknowledgements](#-acknowledgements)
+- [Show Your Support](#-show-your-support)
+- [Keywords / Topics](#-keywords--topics)
 
 ---
 
@@ -33,9 +42,20 @@
 
 Most students understand data structures in theory — but struggle to picture what's actually happening in memory when a node is inserted, a pointer moves, or a tree rebalances. Textbook diagrams are static, and reading code alone doesn't show *how* the structure changes over time.
 
-**Data Structure Visualizer** solves this by giving every operation a live, graphical representation. Select a topic, perform an operation like `Push`, `Enqueue`, or `Insert`, and watch the structure update in real time — complete with labeled pointers (`TOP`, `FRONT`, `REAR`, `HEAD`, `ROOT`) and a running operation log that explains exactly what just happened.
+**Data Structure Visualizer** solves this by giving every operation a live, graphical representation using **Java Swing**. Select a topic, perform an operation like `Push`, `Enqueue`, or `Insert`, and watch the structure update in real time — complete with labeled pointers (`TOP`, `FRONT`, `REAR`, `HEAD`, `ROOT`) and a running operation log that explains exactly what just happened.
 
-This is a semester project built for the **Data Structures** course, designed to be both a learning tool and a classroom demonstration aid.
+This is a semester project built for the **Data Structures** course at COMSATS University, designed to work as both a self-learning tool and a classroom demonstration aid for Java-based DSA education.
+
+---
+
+## 🎯 Why This Project?
+
+| If you are a... | This project helps you... |
+|---|---|
+| **CS/SE Student** | Visually understand Stack, Queue, Linked List, BST, and AVL Tree operations for exams and semester projects |
+| **Instructor / TA** | Demonstrate live data structure behavior on-screen instead of drawing on a whiteboard |
+| **Java Beginner** | See a real-world example of a multi-screen Java Swing desktop application |
+| **Self-Learner** | Practice DSA concepts interactively without needing an IDE debugger or pen-and-paper tracing |
 
 ---
 
@@ -88,8 +108,8 @@ javac -version
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/<your-username>/data-structure-visualizer.git
-   cd data-structure-visualizer
+   git clone https://github.com/Sheryar-Ahmad/DataStructure-Visualizer.git
+   cd DataStructure-Visualizer
    ```
 
 2. **Compile the project**
@@ -111,7 +131,7 @@ javac -version
 ## 📂 Project Structure
 
 ```
-data-structure-visualizer/
+DataStructure-Visualizer/
 ├── src/
 │   ├── Main.java                          # Application launcher
 │   ├── MainMenu.java                      # Central navigation screen
@@ -153,6 +173,28 @@ data-structure-visualizer/
 
 ---
 
+## ❓ Frequently Asked Questions
+
+**What is Data Structure Visualizer?**
+It's a free, open-source Java Swing desktop application that graphically demonstrates how core data structures — Arrays, Stacks, Queues, Linked Lists, and Trees — store and manipulate data in memory.
+
+**Which data structures can I visualize?**
+Arrays, Singly/Circular/Two-Way Linked Lists, Array & Linked List Stacks, Simple/Circular/Priority Queues, Binary Search Trees, AVL Trees, and Infix-Prefix-Postfix conversions.
+
+**Do I need to install a database?**
+No. The project is intentionally database-free — all data structures are visualized in memory, since that's how they actually work at runtime.
+
+**Is this suitable for a university DSA course project?**
+Yes — it was built as a semester project for a Data Structures course and is well-suited for academic submission, viva demonstrations, or classroom teaching aids.
+
+**What Java version do I need?**
+Java 8 or any newer version. No external libraries beyond the standard Java Swing toolkit are required.
+
+**Can I contribute or extend it with new data structures?**
+Absolutely — see the [Contributing](#-contributing) section below.
+
+---
+
 ## 🤝 Contributing
 
 Contributions make the open-source community a great place to learn and build. Any contributions are **greatly appreciated**. Check out GitHub's [First Contributions guide](https://github.com/firstcontributions/first-contributions) if you're new to pull requests.
@@ -167,17 +209,32 @@ Contributions make the open-source community a great place to learn and build. A
 
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [`LICENSE`](https://github.com/Sheryar-Ahmad/DataStructure-Visualizer/blob/main/LICENSE) for more information.
 
 ---
 
 ## 👤 Author
 
-**Sheryar**
-Owner: Sheryar Ahmad
-Project Link: https://github.com/Sheryar-Ahmad/DataStructure-Visualizer
-
+**Sheryar Ahmad**
+🎓 BSE (Software Engineering), — COMSATS University Islamabad, Abbottabad Campus
+🔗 GitHub: [@Sheryar-Ahmad](https://github.com/Sheryar-Ahmad)
+📁 Project Repository: [DataStructure-Visualizer](https://github.com/Sheryar-Ahmad/DataStructure-Visualizer)
 
 ---
 
+## ⭐ Show Your Support
 
+If this project helped you understand data structures better, consider:
+
+- ⭐ **Starring** the [repository](https://github.com/Sheryar-Ahmad/DataStructure-Visualizer) — it directly improves visibility in GitHub search results
+- 🍴 **Forking** it to build your own version or add new topics
+- 🐛 **Opening an issue** for bugs or feature requests
+- 📢 **Sharing** it with classmates learning Java or DSA
+
+---
+
+## 🔑 Keywords / Topics
+
+`java` · `java-swing` · `data-structures` · `dsa` · `dsa-visualizer` · `algorithm-visualization` · `stack` · `queue` · `linked-list` · `binary-search-tree` · `avl-tree` · `tree-traversal` · `infix-postfix-prefix` · `gui-application` · `desktop-application` · `computer-science` · `student-project` · `education-tool` · `comsats`
+
+>
