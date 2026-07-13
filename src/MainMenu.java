@@ -1,7 +1,7 @@
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.*;
 
 public class MainMenu extends JFrame implements ActionListener {
 
@@ -129,7 +129,7 @@ public class MainMenu extends JFrame implements ActionListener {
         }
     }
 
-    // This method gives the same simple style to every button.
+    // This method gives the simple style to every button.
     private void designButton(JButton button, Color color) {
         button.setFont(new Font("Arial", Font.BOLD, 15));
         button.setBackground(color);
