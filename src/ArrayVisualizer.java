@@ -1,7 +1,7 @@
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.*;
 
 public class ArrayVisualizer extends JFrame implements ActionListener {
 
@@ -21,7 +21,7 @@ public class ArrayVisualizer extends JFrame implements ActionListener {
     // This panel draws the array boxes on the screen.
     DrawArrayPanel drawPanel;
 
-    // Size of array is fixed at 8 for easy explanation.
+    // Size of array is fixed at 8 so that we can demonstarte it easily.
     int size = 8;
 
     // This array stores actual integer values.
