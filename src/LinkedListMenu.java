@@ -22,15 +22,17 @@ public class LinkedListMenu extends JFrame implements ActionListener {
 
         // Main heading of this screen.
         title = new JLabel("Linked List Section");
-        title.setBounds(255, 35, 380, 40);
+        title.setBounds(240, 35, 380, 40);
         title.setFont(new Font("Arial", Font.BOLD, 30));
+        title.setHorizontalAlignment(SwingConstants.CENTER);
         title.setForeground(new Color(40, 60, 75));
         add(title);
 
         // This line tells the user to select one linked list topic.
         subtitle = new JLabel("Select the linked list topic you want to visualize");
-        subtitle.setBounds(230, 85, 430, 25);
+        subtitle.setBounds(215, 85, 430, 25);
         subtitle.setFont(new Font("Arial", Font.PLAIN, 16));
+        subtitle.setHorizontalAlignment(SwingConstants.CENTER);
         subtitle.setForeground(new Color(70, 80, 90));
         add(subtitle);
 
@@ -65,6 +67,8 @@ public class LinkedListMenu extends JFrame implements ActionListener {
         // Basic window settings.
         getContentPane().setBackground(new Color(235, 240, 242));
         setSize(860, 500);
+        MainMenu.makeResponsive(this, 860, 500);
+        MainMenu.designTopicButtons(this, MainMenu.LINKED_LIST_COLOR);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
@@ -89,10 +93,10 @@ public class LinkedListMenu extends JFrame implements ActionListener {
 
     // This method gives the same style to all buttons.
     private void designButton(JButton button) {
-        button.setFont(new Font("Arial", Font.BOLD, 15));
-        button.setBackground(new Color(70, 120, 125));
+        button.setFont(new Font("Arial", Font.BOLD, 17));
+        button.setBackground(MainMenu.LINKED_LIST_COLOR);
         button.setForeground(Color.WHITE);
         button.setFocusPainted(false);
-        button.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        button.setBorder(BorderFactory.createLineBorder(new Color(235, 240, 245), 1));
     }
 }

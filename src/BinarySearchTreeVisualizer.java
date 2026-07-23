@@ -57,6 +57,7 @@ public class BinarySearchTreeVisualizer extends JFrame implements ActionListener
         title = new JLabel("Binary Search Tree Visualizer");
         title.setBounds(275, 20, 470, 40);
         title.setFont(new Font("Arial", Font.BOLD, 28));
+        title.setHorizontalAlignment(SwingConstants.CENTER);
         title.setForeground(new Color(40, 60, 75));
         add(title);
 
@@ -134,6 +135,8 @@ public class BinarySearchTreeVisualizer extends JFrame implements ActionListener
         // Basic window settings.
         getContentPane().setBackground(new Color(235, 240, 242));
         setSize(950, 730);
+        MainMenu.makeResponsive(this, 950, 730);
+        MainMenu.designTopicButtons(this, MainMenu.TREE_CONVERSION_COLOR);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);

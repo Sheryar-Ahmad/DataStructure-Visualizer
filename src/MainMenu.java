@@ -1,9 +1,14 @@
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import javax.swing.*;
 
 public class MainMenu extends JFrame implements ActionListener {
+
+    // These colors are used for the buttons in all screens.
+    static final Color LINKED_LIST_COLOR = new Color(70, 120, 125);
+    static final Color STACK_QUEUE_COLOR = new Color(80, 110, 150);
+    static final Color TREE_CONVERSION_COLOR = new Color(110, 95, 145);
+    static final Color EXIT_COLOR = new Color(74, 82, 94);
 
     // These labels show the heading of the main screen.
     JLabel title, subtitle;
@@ -45,37 +50,37 @@ public class MainMenu extends JFrame implements ActionListener {
 
         // Array button opens the array topic screen.
         arrays = new JButton("ARRAYS");
-        designButton(arrays, new Color(70, 120, 125));
+        designButton(arrays, LINKED_LIST_COLOR);
         arrays.addActionListener(this);
         buttonPanel.add(arrays);
 
         // Linked list button opens the linked list menu.
         linkedLists = new JButton("LINKED LISTS");
-        designButton(linkedLists, new Color(70, 120, 125));
+        designButton(linkedLists, LINKED_LIST_COLOR);
         linkedLists.addActionListener(this);
         buttonPanel.add(linkedLists);
 
         // Stack button opens the stack menu.
         stacks = new JButton("STACKS");
-        designButton(stacks, new Color(80, 110, 150));
+        designButton(stacks, STACK_QUEUE_COLOR);
         stacks.addActionListener(this);
         buttonPanel.add(stacks);
 
         // Queue button opens the queue menu.
         queues = new JButton("QUEUES");
-        designButton(queues, new Color(80, 110, 150));
+        designButton(queues, STACK_QUEUE_COLOR);
         queues.addActionListener(this);
         buttonPanel.add(queues);
 
         // Tree button opens the tree menu.
         trees = new JButton("TREES");
-        designButton(trees, new Color(110, 95, 145));
+        designButton(trees, TREE_CONVERSION_COLOR);
         trees.addActionListener(this);
         buttonPanel.add(trees);
 
         // Conversion button opens infix conversion topics.
         conversions = new JButton("CONVERSIONS");
-        designButton(conversions, new Color(110, 95, 145));
+        designButton(conversions, TREE_CONVERSION_COLOR);
         conversions.addActionListener(this);
         buttonPanel.add(conversions);
 
@@ -86,7 +91,7 @@ public class MainMenu extends JFrame implements ActionListener {
 
         // Exit button closes the project.
         exit = new JButton("EXIT");
-        designButton(exit, new Color(74, 82, 94));
+        designButton(exit, EXIT_COLOR);
         exit.setPreferredSize(new Dimension(220, 42));
         exit.addActionListener(this);
         exitPanel.add(exit);
@@ -131,11 +136,71 @@ public class MainMenu extends JFrame implements ActionListener {
 
     // This method gives the simple style to every button.
     private void designButton(JButton button, Color color) {
-        button.setFont(new Font("Arial", Font.BOLD, 15));
+        button.setFont(new Font("Arial", Font.BOLD, 17));
         button.setBackground(color);
         button.setForeground(Color.WHITE);
         button.setFocusPainted(false);
         button.setBorder(BorderFactory.createLineBorder(new Color(235, 240, 245), 1));
+    }
+
+    // This method makes fixed-position screens scale when the window size changes.
+    static void makeResponsive(JFrame frame, int baseWidth, int baseHeight) {
+        frame.setMinimumSize(new Dimension(baseWidth, baseHeight));
+
+        Container contentPane = frame.getContentPane();
+        Component[] components = contentPane.getComponents();
+        Rectangle[] bounds = new Rectangle[components.length];
+
+        for (int i = 0; i < components.length; i++) {
+            bounds[i] = components[i].getBounds();
+        }
+
+        frame.addComponentListener(new ComponentAdapter() {
+            public void componentResized(ComponentEvent e) {
+                int currentWidth = contentPane.getWidth();
+                int currentHeight = contentPane.getHeight();
+
+                if (currentWidth <= 0 || currentHeight <= 0) {
+                    return;
+                }
+
+                double widthScale = currentWidth / (double) baseWidth;
+                double heightScale = currentHeight / (double) baseHeight;
+
+                for (int i = 0; i < components.length; i++) {
+                    Rectangle oldBounds = bounds[i];
+                    components[i].setBounds(
+                            (int) (oldBounds.x * widthScale),
+                            (int) (oldBounds.y * heightScale),
+                            (int) (oldBounds.width * widthScale),
+                            (int) (oldBounds.height * heightScale)
+                    );
+                }
+
+                contentPane.revalidate();
+                contentPane.repaint();
+            }
+        });
+    }
+
+    // This method gives every button the main menu style with clearer text.
+    static void designTopicButtons(Container container, Color color) {
+        Component[] components = container.getComponents();
+
+        for (Component component : components) {
+            if (component instanceof JButton) {
+                JButton button = (JButton) component;
+                button.setFont(new Font("Arial", Font.BOLD, 17));
+                button.setBackground(color);
+                button.setForeground(Color.WHITE);
+                button.setFocusPainted(false);
+                button.setBorder(BorderFactory.createLineBorder(new Color(235, 240, 245), 1));
+            }
+
+            if (component instanceof Container) {
+                designTopicButtons((Container) component, color);
+            }
+        }
     }
 
     // This main method lets us run this file directly if needed.

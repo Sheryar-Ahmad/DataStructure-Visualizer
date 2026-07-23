@@ -40,6 +40,7 @@ public class ArrayVisualizer extends JFrame implements ActionListener {
         title = new JLabel("Array Visualizer");
         title.setBounds(360, 20, 300, 40);
         title.setFont(new Font("Arial", Font.BOLD, 28));
+        title.setHorizontalAlignment(SwingConstants.CENTER);
         title.setForeground(new Color(40, 60, 75));
         add(title);
 
@@ -122,6 +123,8 @@ public class ArrayVisualizer extends JFrame implements ActionListener {
         getContentPane().setBackground(new Color(235, 240, 242));
         setSize(900, 600);
         setLayout(null);
+        MainMenu.makeResponsive(this, 900, 600);
+        MainMenu.designTopicButtons(this, MainMenu.LINKED_LIST_COLOR);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);

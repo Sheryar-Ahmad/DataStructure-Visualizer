@@ -22,15 +22,17 @@ public class ConversionMenu extends JFrame implements ActionListener {
 
         // Main heading of conversion section.
         title = new JLabel("Conversion Section");
-        title.setBounds(270, 40, 340, 40);
+        title.setBounds(260, 40, 340, 40);
         title.setFont(new Font("Arial", Font.BOLD, 30));
+        title.setHorizontalAlignment(SwingConstants.CENTER);
         title.setForeground(new Color(40, 60, 75));
         add(title);
 
         // This line tells the user to select one conversion.
         subtitle = new JLabel("Select the expression conversion you want to visualize");
-        subtitle.setBounds(220, 90, 470, 25);
+        subtitle.setBounds(195, 90, 470, 25);
         subtitle.setFont(new Font("Arial", Font.PLAIN, 16));
+        subtitle.setHorizontalAlignment(SwingConstants.CENTER);
         subtitle.setForeground(new Color(70, 80, 90));
         add(subtitle);
 
@@ -58,6 +60,8 @@ public class ConversionMenu extends JFrame implements ActionListener {
         // Basic window settings.
         getContentPane().setBackground(new Color(235, 240, 242));
         setSize(860, 470);
+        MainMenu.makeResponsive(this, 860, 470);
+        MainMenu.designTopicButtons(this, MainMenu.TREE_CONVERSION_COLOR);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
@@ -79,10 +83,10 @@ public class ConversionMenu extends JFrame implements ActionListener {
 
     // This method gives the same style to every button.
     private void designButton(JButton button) {
-        button.setFont(new Font("Arial", Font.BOLD, 15));
-        button.setBackground(new Color(110, 95, 145));
+        button.setFont(new Font("Arial", Font.BOLD, 17));
+        button.setBackground(MainMenu.TREE_CONVERSION_COLOR);
         button.setForeground(Color.WHITE);
         button.setFocusPainted(false);
-        button.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        button.setBorder(BorderFactory.createLineBorder(new Color(235, 240, 245), 1));
     }
 }

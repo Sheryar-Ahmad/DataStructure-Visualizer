@@ -58,6 +58,7 @@ public class TwoWayCircularLinkedListVisualizer extends JFrame implements Action
         title = new JLabel("Two-Way Circular Linked List Visualizer");
         title.setBounds(190, 20, 620, 40);
         title.setFont(new Font("Arial", Font.BOLD, 26));
+        title.setHorizontalAlignment(SwingConstants.CENTER);
         title.setForeground(new Color(40, 60, 75));
         add(title);
 
@@ -149,6 +150,8 @@ public class TwoWayCircularLinkedListVisualizer extends JFrame implements Action
         // Basic window settings.
         getContentPane().setBackground(new Color(235, 240, 242));
         setSize(975, 680);
+        MainMenu.makeResponsive(this, 975, 680);
+        MainMenu.designTopicButtons(this, MainMenu.LINKED_LIST_COLOR);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);

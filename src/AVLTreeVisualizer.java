@@ -67,6 +67,7 @@ public class AVLTreeVisualizer extends JFrame implements ActionListener {
         title = new JLabel("AVL Tree Visualizer");
         title.setBounds(330, 20, 330, 40);
         title.setFont(new Font("Arial", Font.BOLD, 28));
+        title.setHorizontalAlignment(SwingConstants.CENTER);
         title.setForeground(new Color(40, 60, 75));
         add(title);
 
@@ -138,6 +139,8 @@ public class AVLTreeVisualizer extends JFrame implements ActionListener {
         // Basic window settings.
         getContentPane().setBackground(new Color(235, 240, 242));
         setSize(950, 735);
+        MainMenu.makeResponsive(this, 950, 735);
+        MainMenu.designTopicButtons(this, MainMenu.TREE_CONVERSION_COLOR);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);

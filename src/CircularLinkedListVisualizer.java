@@ -54,6 +54,7 @@ public class CircularLinkedListVisualizer extends JFrame implements ActionListen
         title = new JLabel("Circular Linked List Visualizer");
         title.setBounds(250, 20, 480, 40);
         title.setFont(new Font("Arial", Font.BOLD, 27));
+        title.setHorizontalAlignment(SwingConstants.CENTER);
         title.setForeground(new Color(40, 60, 75));
         add(title);
 
@@ -139,6 +140,8 @@ public class CircularLinkedListVisualizer extends JFrame implements ActionListen
         // Basic window settings.
         getContentPane().setBackground(new Color(235, 240, 242));
         setSize(920, 655);
+        MainMenu.makeResponsive(this, 920, 655);
+        MainMenu.designTopicButtons(this, MainMenu.LINKED_LIST_COLOR);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);

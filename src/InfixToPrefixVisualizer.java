@@ -41,6 +41,7 @@ public class InfixToPrefixVisualizer extends JFrame implements ActionListener {
         title = new JLabel("Infix to Prefix Conversion");
         title.setBounds(290, 20, 420, 40);
         title.setFont(new Font("Arial", Font.BOLD, 28));
+        title.setHorizontalAlignment(SwingConstants.CENTER);
         title.setForeground(new Color(40, 60, 75));
         add(title);
 
@@ -102,6 +103,8 @@ public class InfixToPrefixVisualizer extends JFrame implements ActionListener {
         // Basic window settings.
         getContentPane().setBackground(new Color(235, 240, 242));
         setSize(950, 630);
+        MainMenu.makeResponsive(this, 950, 630);
+        MainMenu.designTopicButtons(this, MainMenu.TREE_CONVERSION_COLOR);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);

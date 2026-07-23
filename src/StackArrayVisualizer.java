@@ -43,6 +43,7 @@ public class StackArrayVisualizer extends JFrame implements ActionListener {
         title = new JLabel("Stack Using Array");
         title.setBounds(330, 20, 300, 40);
         title.setFont(new Font("Arial", Font.BOLD, 28));
+        title.setHorizontalAlignment(SwingConstants.CENTER);
         title.setForeground(new Color(40, 60, 75));
         add(title);
 
@@ -116,6 +117,8 @@ public class StackArrayVisualizer extends JFrame implements ActionListener {
         // Basic window settings.
         getContentPane().setBackground(new Color(235, 240, 242));
         setSize(970, 610);
+        MainMenu.makeResponsive(this, 970, 610);
+        MainMenu.designTopicButtons(this, MainMenu.STACK_QUEUE_COLOR);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);

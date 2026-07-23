@@ -22,15 +22,17 @@ public class QueueMenu extends JFrame implements ActionListener {
 
         // Main heading of the queue section.
         title = new JLabel("Queue Section");
-        title.setBounds(310, 40, 280, 40);
+        title.setBounds(290, 40, 280, 40);
         title.setFont(new Font("Arial", Font.BOLD, 30));
+        title.setHorizontalAlignment(SwingConstants.CENTER);
         title.setForeground(new Color(40, 60, 75));
         add(title);
 
         // This line tells the user to choose a queue type.
         subtitle = new JLabel("Select the queue topic you want to visualize");
-        subtitle.setBounds(250, 90, 390, 25);
+        subtitle.setBounds(235, 90, 390, 25);
         subtitle.setFont(new Font("Arial", Font.PLAIN, 16));
+        subtitle.setHorizontalAlignment(SwingConstants.CENTER);
         subtitle.setForeground(new Color(70, 80, 90));
         add(subtitle);
 
@@ -58,6 +60,8 @@ public class QueueMenu extends JFrame implements ActionListener {
         // Basic window settings.
         getContentPane().setBackground(new Color(235, 240, 242));
         setSize(860, 470);
+        MainMenu.makeResponsive(this, 860, 470);
+        MainMenu.designTopicButtons(this, MainMenu.STACK_QUEUE_COLOR);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
@@ -79,10 +83,10 @@ public class QueueMenu extends JFrame implements ActionListener {
 
     // This method gives the same style to every button.
     private void designButton(JButton button) {
-        button.setFont(new Font("Arial", Font.BOLD, 15));
-        button.setBackground(new Color(80, 110, 150));
+        button.setFont(new Font("Arial", Font.BOLD, 17));
+        button.setBackground(MainMenu.STACK_QUEUE_COLOR);
         button.setForeground(Color.WHITE);
         button.setFocusPainted(false);
-        button.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        button.setBorder(BorderFactory.createLineBorder(new Color(235, 240, 245), 1));
     }
 }
